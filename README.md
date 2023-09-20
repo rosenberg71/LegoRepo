@@ -1,4 +1,4 @@
-# Your Project Name
+# Lego React.js application and node.js server
 
 Provide a brief description of your project here.
 
@@ -7,9 +7,6 @@ Provide a brief description of your project here.
 - [Installation](#installation)
   - [Server (Node.js Project)](#server-nodejs-project)
   - [Equipment State App (React Project)](#equipment-state-app-react-project)
-- [Usage](#usage)
-- [Contribution](#contribution)
-- [License](#license)
 
 ## Installation
 1. **Clone the Repository**:
