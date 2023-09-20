@@ -1,0 +1,9 @@
+.square-container{
+    display: flex;
+}
+
+.equipment-container{
+    border: 1px solid black;
+    padding: 5%;
+    margin-top: 5%;
+  }
