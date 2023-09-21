@@ -4,9 +4,18 @@ Provide a brief description of your project here.
 
 ## Table of Contents
 
+- [Prerequisites](#prerequisites)
 - [Installation](#installation)
   - [Server (Node.js Project)](#server-nodejs-project)
   - [Equipment State App (React Project)](#equipment-state-app-react-project)
+
+# Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- **Git**: Your machine must have Git installed. If not, you can download and install Git from [here](https://git-scm.com/downloads).
+  
+- **Node.js & npm**: This project requires Node.js. The installation of Node.js includes npm (node package manager). Download and install it from [here](https://nodejs.org/).
 
 ## Installation
 1. **Clone the Repository**:
