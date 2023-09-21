@@ -12,6 +12,8 @@ Provide a brief description of your project here.
 1. **Clone the Repository**:
     ```bash
     git clone https://github.com/rosenberg71/LegoRepo.git
+
+    cd LegoRepo
 ### Server (Node.js Project)
 
 
@@ -35,7 +37,7 @@ Provide a brief description of your project here.
 
 2. **Install Dependencies**:
 
-   From the git root directory, run the following commands:
+   Open new terminal from the git root directory and run the following commands:
 
    ```bash
    cd equipment-state-app

@@ -26,7 +26,7 @@ export default class Equipment extends Component<{}, EquipmentComponentState> {
   async componentDidMount() {
     try {
       const id = await ApiService.fetchEquipmentId();
-      this.setState({id, isLoading: false});
+      this.setState({ id, isLoading: false });
     } catch (error) {
       // Actually handle the error thrown in the API service
       console.log("Error:", error);
@@ -49,13 +49,24 @@ export default class Equipment extends Component<{}, EquipmentComponentState> {
     }
   }
 
+  useOfflineButton = () => {
+    this.setState({isLoading: false})
+  }
+
   render() {
     if (this.state.isLoading) {
-      return;
+      return (
+        <div>
+          <h3> Waiting for connection to server </h3>
+          <h5> Use button below to ignore connection and use offline </h5>
+          <button onClick={this.useOfflineButton}> Use offline </button>
+        </div>
+      );
     }
     return (
       <div className='equipment-container' >
         <h3>Equipment ID: {this.state.id}</h3>
+        <h3>Current order: some order</h3>
         <div className='square-container'>
           <h5>Current state of equipment:</h5>
           <ColorSquare color={this.state.color} size={ColorSquareSize.LARGE}></ColorSquare>
