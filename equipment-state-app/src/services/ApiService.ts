@@ -20,15 +20,14 @@ export default class ApiService {
         }
     }
 
-    static async sendEquipmentState(stateColor: ValidStateColor) {
+    static async sendEquipmentState(stateColor: ValidStateColor, equipmentId: number) {
         try {
-            console.log("trying to send state: ", JSON.stringify(stateColor))
             const response = await fetch(`${BASE_URL}/equipment/update`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({newState: stateColor})
+                body: JSON.stringify({newState: stateColor, id: equipmentId})
             });
 
             if (!response.ok) {

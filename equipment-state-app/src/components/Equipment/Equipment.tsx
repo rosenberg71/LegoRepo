@@ -40,7 +40,11 @@ export default class Equipment extends Component<{}, EquipmentComponentState> {
 
   async sendStateToServer() {
     try {
-      const response = await ApiService.sendEquipmentState(this.state.color);
+      if (this.state.id == null){
+        console.log("No equipment ID");
+        return;
+      }
+      const response = await ApiService.sendEquipmentState(this.state.color, this.state.id);
       // Handle the response, if necessary
       console.log("State sent successfully!", response);
     } catch (error) {

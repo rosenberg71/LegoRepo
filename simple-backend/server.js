@@ -16,10 +16,10 @@ app.get('/api/equipment/id', (req, res) => {
 
 app.post('/api/equipment/update', (req, res) => {
     // Simulate updating the equipment state using the data from the client
-    const newState = req.body;
-    console.log("State request received: ", newState)
+    const requestBody = req.body;
+    console.log("State request received: ", requestBody);
 
-    res.json({ status: 'State updated and data entry stored in DB'});
+    res.json({ status: `State updated with: ${requestBody.newState} for equipment with ID: ${requestBody.id} and data entry stored in DB`});
 });
 
 app.listen(PORT, () => {
